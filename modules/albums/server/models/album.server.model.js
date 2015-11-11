@@ -16,6 +16,11 @@ var AlbumSchema = new Schema({
     required: 'Please fill Album name',
     trim: true
   },
+  coverArt: {
+    type: String,
+    default: '/modules/theme/client/img/placeholder.jpg',
+    trim: true
+  },
   created: {
     type: Date,
     default: Date.now
