@@ -20,6 +20,7 @@ coverage/
 # ======================
 public/dist/
 uploads
+modules/theme/client/css
 modules/users/client/img/profile/uploads
 config/env/local.js
 *.pem

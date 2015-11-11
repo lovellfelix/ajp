@@ -1,0 +1,13 @@
+.topbar{
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  text-align: center;
+  .logo{
+    height: 96px;
+    width: auto;
+    display: inline-block;
+  }
+}
