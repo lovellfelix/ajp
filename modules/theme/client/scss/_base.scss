@@ -1,4 +1,4 @@
-body{
+body {
   background-color: #fafafa;
 }
 
@@ -13,17 +13,6 @@ a:hover{
   color: #f26460;
   text-decoration: none;
 }
-.clear{
-  display: block;
-  content: '';
-  clear: both;
-}
-.left{
-  float: left;
-}
-.right{
-  float: right;
-}
 
 .shop-list .item{
   a:hover{
@@ -33,7 +22,7 @@ a:hover{
   }
 
 }
-.page-title{
+.page-title {
   text-align: center;
   span{
     display: inline-block;
@@ -65,12 +54,7 @@ a:hover{
 .ng-hide{
   display: none;
 }
-.alert, .form-group {
-  font-size: 2em;
-}
-.form-control, .btn{
-  font-size: 1em;
-}
+
 
 
 /*---------------- SMALL DESKTOP ----------------*/
