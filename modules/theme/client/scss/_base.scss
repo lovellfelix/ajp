@@ -1,0 +1,191 @@
+
+.topbar{
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  text-align: center;
+  .logo{
+    height: 96px;
+    width: auto;
+    display: inline-block;
+  }
+}
+
+a{
+  color: #505050;
+}
+a:hover{
+  color: #f26460;
+  text-decoration: none;
+}
+.clear{
+  display: block;
+  content: '';
+  clear: both;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.container{
+  max-width: 940px;
+}
+body{
+  // margin-top: 46px;
+  background-color: #fafafa;
+}
+
+.insta-list .item{
+  padding-bottom: 8px;
+  padding-top: 8px;
+  position: relative;
+  a{
+    display: block;
+    position: relative;
+    // margin: 15px 0;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    opacity: 1.2;
+  }
+  .text,.text2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+    display: block;
+    color: #fff;
+    font-size: 2.2em;
+    padding: 3px 15px;
+  }
+  .text2{
+    font-size: 1.4em;
+    font-weight: 300;
+    padding: 8px 15px;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.5);
+    text-align: left;
+  }
+  .hover{
+    // display: none;
+    display: table;
+    font-size: 2.2em;
+    color: #555;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .vertical-center{
+    position: relative;
+    top: -15px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  a:hover{
+    img{
+      opacity: 0.8;
+    }
+    .hover{
+      display: table;
+    }
+  }
+}
+.shop-list .item{
+  a:hover{
+    img{
+      opacity: 0.2;
+    }
+  }
+
+}
+.page-title{
+  text-align: center;
+  span{
+    display: inline-block;
+    background-color: #4E9CBD;
+    color: #fff;
+    padding: 8px 40px;
+    margin-bottom: 15px;
+    border-radius: 50px 50px 50px 50px;
+  }
+}
+
+.tools{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 100%;
+  text-align: right;
+  a{
+    font-size: 2em;
+    &:focus{
+      text-decoration: none;
+    }
+  }
+}
+
+.insta-list .item .tools a {
+  display: inline-block;
+}
+.ng-hide{
+  display: none;
+}
+.alert, .form-group {
+  font-size: 2em;
+}
+.form-control, .btn{
+  font-size: 1em;
+}
+
+
+/*---------------- SMALL DESKTOP ----------------*/
+@media (max-width: 1199px){
+}
+/*---------------- TABLET & MOBILE ----------------*/
+@media (max-width: 992px) {
+}
+/*---------------- TABLET & ABOVE ----------------*/
+@media (min-width: 993px) {
+
+}
+/*---------------- TABLET ----------------*/
+@media (min-width: 768px) and (max-width: 992px) {
+
+}
+/*---------------- MOBILE ----------------*/
+@media (max-width: 767px) {
+
+}
+/*---------------- SMALL MOBILE ----------------*/
+@media (max-width: 550px) {
+  .insta-list{
+    margin-left: -3px;
+    margin-right: -3px;
+    &>div{
+      padding-left: 3px;
+      padding-right: 3px;
+    }
+    .item{
+      padding-bottom: 3px;
+      padding-top: 3px;
+      .hover{
+        font-size: 2em;
+        line-height: 1em;
+      }
+    }
+  }
+}
+/*---------------- SMALL MOBILE ----------------*/
+@media (max-width: 480px) {
+}

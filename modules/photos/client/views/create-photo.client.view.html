@@ -1,0 +1,26 @@
+<section data-ng-controller="PhotosController">
+    <div class="page-header">
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <div class="controls">
+                        <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
+
+                        <input type="text" data-ng-model="flickrUrl" id="flickrUrl" class="form-control" placeholder="flickrUrl" required>
+                    </div>
+                    <div class="controls">
+                        <input type="text" data-ng-model="price" id="price" class="form-control" placeholder="price" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
