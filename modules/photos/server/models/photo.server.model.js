@@ -32,6 +32,10 @@ var PhotoSchema = new Schema({
     type: Date,
     default: Date.now
   },
+  album: {
+    type: Schema.ObjectId,
+    ref: 'Album'
+  },
   user: {
     type: Schema.ObjectId,
     ref: 'User'
