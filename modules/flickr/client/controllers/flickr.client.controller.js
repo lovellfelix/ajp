@@ -1,10 +1,10 @@
 'use strict';
 
 // Flickr controller
-angular.module('flickr').controller('FlickrController', ['$http', '$scope', '$stateParams', '$location', 'Authentication',
-  function($http, $scope, $stateParams, $location, Authentication) {
+angular.module('flickr').controller('FlickrController', ['$http', '$scope', '$stateParams', '$location', '$modal', 'Authentication',
+  function($http, $scope, $stateParams, $location, $modal, Authentication) {
     $scope.totalItems = 640;
-    $scope.currentPage = 4;
+    $scope.currentPage = 2;
 
     $scope.setPage = function(pageNo) {
       $scope.currentPage = pageNo;
@@ -26,6 +26,24 @@ angular.module('flickr').controller('FlickrController', ['$http', '$scope', '$st
     $scope.currentPhotoSrc = '';
     $scope.text = '';
     $scope.modalOpened = null;
+
+
+
+    //   // pagination controls
+  	// $scope.currentPage = 1;
+  	// $scope.totalItems = $scope.items.length;
+  	// $scope.entryLimit = 8; // items per page
+  	// $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
+    //
+  	// // $watch search to update pagination
+  	// $scope.$watch('search', function (newVal, oldVal) {
+  	// 	$scope.filtered = filterFilter($scope.items, newVal);
+  	// 	$scope.totalItems = $scope.filtered.length;
+  	// 	$scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
+  	// 	$scope.currentPage = 1;
+  	// }, true);
+
+
     // Search
 
     $scope.search = function(text, page) {
@@ -49,10 +67,25 @@ angular.module('flickr').controller('FlickrController', ['$http', '$scope', '$st
 
       });
 
+    };
 
+    //$scope.search(page);
 
+    $scope.findFlickr = function(text, page) {
+        $scope.search(text, page);
+        $modal.open({
+          templateUrl: 'modules/flickr/client/views/modal-flickr.client.view.html',
+          windowClass: 'modal-fullscreen',
+          // controller: 'FlickrController',
+          scope: $scope
+        });
 
     };
+
+    $scope.cancel = function () {
+  //$modalInstance.dismiss('cancel');
+};
+
 
 
   }

@@ -1,7 +1,11 @@
 <section data-ng-controller="AlbumsController" data-ng-init="findOne()">
 	<div class="page-header">
 		<h1 data-ng-bind="album.name"></h1>
+		<button type="button" ng-controller="FlickrController" class="btn btn-default" id="flickr-search-button" ng-click="findFlickr(text)">Add to Album</button>
+
 	</div>
+
+
 	<div class="pull-right" data-ng-show="authentication.user._id == album.user._id">
 		<a class="btn btn-primary" href="/#!/albums/{{album._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>

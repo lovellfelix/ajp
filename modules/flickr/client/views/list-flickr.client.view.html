@@ -1,5 +1,8 @@
 <section data-ng-controller="FlickrController">
 
+  <button type="button" class="btn btn-default" id="flickr-search-button" ng-click="findFlickr(text)">Add to Album</button>
+
+
 <div class="row">
     <div class="col-md-4">
         <form class="form-inline" role="form">
@@ -14,7 +17,7 @@
     </div>
     <div>
 
-    <pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages" ng-click="search(text)"></pagination>
+    <pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages" ng-click="search()"></pagination>
 
 </div>
 
@@ -24,7 +27,7 @@
     <div ng-hide="loading" class="flickr-photo" ng-repeat="photo in photos"><a ng-href="#!/{{photo.id}}"><img ng-src="http://farm{{photo.farm}}.static.flickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_s.jpg"></a></div>
 </div>
 
-<div class="modal photoModal" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- <div class="modal photoModal" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content" ng-show="currentPhoto">
             <div class="modal-header">
@@ -44,6 +47,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 </section>

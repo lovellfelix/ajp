@@ -1,0 +1,15 @@
+<div class="modal-header">
+  <h3 class="modal-title">I'm a modal!</h3>
+</div>
+<div class="modal-body">
+</div>
+<div class="flickr-photos">
+    <div ng-show="loading"><img src="images/loader.gif"></div>
+    <div ng-hide="loading" class="flickr-photo" ng-repeat="photo in photos"><a ng-href="#!/{{photo.id}}"><img ng-src="http://farm{{photo.farm}}.static.flickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_s.jpg"></a></div>
+</div>
+
+
+<div class="modal-footer">
+  <button class="btn btn-primary" ng-click="ok()" type="button">OK</button>
+  <button class="btn btn-warning" ng-click="cancel()" type="button">Cancel</button>
+</div>
